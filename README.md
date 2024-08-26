@@ -2,6 +2,8 @@
 
 A web application that uses AI to identify plants from images. Users can either upload an image or take a picture directly using their device's camera, and the app provides detailed information about the plant, including its common name, scientific name, description, growing conditions, and care tips in an aesthetic user interface.
 
+![BotanIQ App Screenshot](images/botanIQ-app-screenshot.png)
+
 ## Features
 
 - **Upload Plant Image**: Users can upload an image of a plant from their device to identify it.
