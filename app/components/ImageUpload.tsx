@@ -3,9 +3,15 @@
 import { useState } from 'react';
 import { GoogleGenerativeAI, Part } from '@google/generative-ai';
 
-// TODO: get the api key stored and sorted properly
-const genAI = new GoogleGenerativeAI("AIzaSyCqq8xXa7K0EIplpMoEI-0cgZTLkmeSIiw");
+//Note: if you want to replicate this application, please obtain a Gemini API Key and pass it securely through an environment variable below.
 
+const geminiApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+
+if (!geminiApiKey) {
+  throw new Error("Gemini API key is not set in the environment variables.");
+}
+
+const genAI = new GoogleGenerativeAI(geminiApiKey);
 interface ImageUploadProps {
   onPlantIdentified: (info: string, imageUrl: string) => void;
 }
